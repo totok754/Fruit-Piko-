@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://t4sp0mccbs8t"]
+
+[ext_resource type="Script" uid="uid://d0y5ged2y3y4e" path="res://pineapple.gd" id="1_5josp"]
+[ext_resource type="Texture2D" uid="uid://dh0pdfmyppw47" path="res://Place_holder/Fruits/pineapple.png" id="2_5josp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucww4"]
+atlas = ExtResource("2_5josp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nc528"]
+atlas = ExtResource("2_5josp")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fh24y"]
+atlas = ExtResource("2_5josp")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b67vw"]
+atlas = ExtResource("2_5josp")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nc528"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucww4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nc528")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fh24y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b67vw")
+}],
+"loop": false,
+"name": &"grow",
+"speed": 25.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fh24y"]
+radius = 25.0
+height = 54.0
+
+[node name="pineapple" type="Node2D" unique_id=2110663659]
+
+[node name="pineapple" type="RigidBody2D" parent="." unique_id=1737543150 groups=["Blueberry"]]
+input_pickable = true
+script = ExtResource("1_5josp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="pineapple" unique_id=754090004 groups=["Blueberry"]]
+position = Vector2(-1, 3)
+scale = Vector2(2.125, 2.125)
+sprite_frames = SubResource("SpriteFrames_nc528")
+animation = &"grow"
+frame = 4
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pineapple" unique_id=444147906 groups=["Blueberry"]]
+visible = false
+position = Vector2(0, 4)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_fh24y")
+
+[connection signal="input_event" from="pineapple" to="pineapple" method="_on_input_event"]

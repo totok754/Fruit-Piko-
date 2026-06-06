@@ -1,0 +1,338 @@
+[gd_scene format=3 uid="uid://ca8yemtgk8mpd"]
+
+[ext_resource type="Script" uid="uid://biorr538jkup0" path="res://Scripts/shop.gd" id="1_pjqej"]
+[ext_resource type="Texture2D" uid="uid://ec04i014nnjd" path="res://Place_holder/shopb.png" id="2_6vpi8"]
+[ext_resource type="Texture2D" uid="uid://bq1m4abk7dyl7" path="res://Place_holder/boxs/shopbba.png" id="3_wr1l8"]
+[ext_resource type="Texture2D" uid="uid://bm6i05pfqvkuc" path="res://Place_holder/shopbh.png" id="4_qo7yf"]
+[ext_resource type="FontFile" uid="uid://cvdmj41qc8leu" path="res://fruit_piko_font.ttf" id="5_ju5wf"]
+[ext_resource type="Texture2D" uid="uid://bfgi6il05ymn7" path="res://Place_holder/buttton.png" id="6_di81v"]
+[ext_resource type="Texture2D" uid="uid://cshrfunj6tabu" path="res://Place_holder/sellb.png" id="7_3q3f7"]
+[ext_resource type="Texture2D" uid="uid://bgt2xjvkueq6v" path="res://Place_holder/sky2.png" id="8_vcxuf"]
+[ext_resource type="Texture2D" uid="uid://d03fhr851sr37" path="res://Place_holder/list.png" id="9_7rv6t"]
+[ext_resource type="Texture2D" uid="uid://cyqpyk1ri8yrm" path="res://Place_holder/shop.png" id="10_rxbiq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sw5c6"]
+font = ExtResource("5_ju5wf")
+font_size = 27
+font_color = Color(0.6557279, 0.7226042, 0.59711486, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6lah5"]
+font = ExtResource("5_ju5wf")
+font_size = 39
+font_color = Color(0.91881603, 0.57329035, 0.58000606, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fgaav"]
+font = ExtResource("5_ju5wf")
+font_size = 19
+font_color = Color(0.91764706, 0.57254905, 0.5803922, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rrolr"]
+font = ExtResource("5_ju5wf")
+font_size = 19
+font_color = Color(0.91764706, 0.57254905, 0.5803922, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_msgp6"]
+font = ExtResource("5_ju5wf")
+font_size = 12
+font_color = Color(0.5809981, 0.7851324, 0.4835809, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e23gp"]
+font = ExtResource("5_ju5wf")
+font_size = 24
+font_color = Color(0.2162449, 0.32383183, 0.16261166, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xqmyw"]
+font = ExtResource("5_ju5wf")
+font_size = 150
+font_color = Color(0, 0, 0, 1)
+
+[node name="Shop" type="Node2D" unique_id=382422292]
+script = ExtResource("1_pjqej")
+
+[node name="tree" type="TextureButton" parent="." unique_id=262929069]
+offset_left = 24.0
+offset_top = -4.0
+offset_right = 199.0
+offset_bottom = 171.0
+texture_normal = ExtResource("2_6vpi8")
+texture_pressed = ExtResource("3_wr1l8")
+texture_hover = ExtResource("4_qo7yf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="tree" unique_id=572090903]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 69.0
+offset_right = 151.0
+offset_bottom = 103.0
+text = "To tree!"
+label_settings = SubResource("LabelSettings_sw5c6")
+
+[node name="button_ui" type="Node2D" parent="." unique_id=1985252737]
+
+[node name="Buttton" type="Sprite2D" parent="button_ui" unique_id=1198543187]
+position = Vector2(309.75, 331.75)
+scale = Vector2(11.296876, 11.296876)
+texture = ExtResource("6_di81v")
+
+[node name="Buttton2" type="Sprite2D" parent="button_ui" unique_id=1150813999]
+position = Vector2(438.75, 331.75)
+scale = Vector2(11.296876, 11.296876)
+texture = ExtResource("6_di81v")
+
+[node name="Buttton3" type="Sprite2D" parent="button_ui" unique_id=1790639660]
+position = Vector2(570.75, 331.75)
+scale = Vector2(11.296876, 11.296876)
+texture = ExtResource("6_di81v")
+
+[node name="Buttton4" type="Sprite2D" parent="button_ui" unique_id=1685863407]
+position = Vector2(706.75, 331.75)
+scale = Vector2(11.296876, 11.296876)
+texture = ExtResource("6_di81v")
+
+[node name="Buttton5" type="Sprite2D" parent="button_ui" unique_id=1959382844]
+position = Vector2(434.75, 458.75)
+scale = Vector2(11.296876, 11.296876)
+texture = ExtResource("6_di81v")
+
+[node name="Buttton6" type="Sprite2D" parent="button_ui" unique_id=179909412]
+position = Vector2(567.75, 457.75)
+scale = Vector2(11.296876, 11.296876)
+texture = ExtResource("6_di81v")
+
+[node name="Sellb" type="Sprite2D" parent="button_ui" unique_id=1843615641]
+position = Vector2(479, 576)
+scale = Vector2(8.937498, 8.937498)
+texture = ExtResource("7_3q3f7")
+
+[node name="backround" type="Node2D" parent="." unique_id=1973597109]
+
+[node name="Sky" type="Sprite2D" parent="backround" unique_id=1275475158]
+z_index = -3
+position = Vector2(588, 342.5)
+scale = Vector2(37.125, 21.96875)
+texture = ExtResource("8_vcxuf")
+
+[node name="List" type="Sprite2D" parent="backround" unique_id=1904285534]
+position = Vector2(989.00006, 159)
+scale = Vector2(10.812501, 10.812501)
+texture = ExtResource("9_7rv6t")
+
+[node name="list_txt" type="Label" parent="backround" unique_id=786189833]
+offset_left = 950.0
+offset_top = 5.0
+offset_right = 1028.0
+offset_bottom = 54.0
+text = "List:"
+label_settings = SubResource("LabelSettings_6lah5")
+
+[node name="Apple_counter" type="Label" parent="backround" unique_id=1959850783]
+offset_left = 893.0
+offset_top = 77.0
+offset_right = 1062.0
+offset_bottom = 109.0
+text = " • Apples - 0"
+label_settings = SubResource("LabelSettings_fgaav")
+
+[node name="Shop" type="Sprite2D" parent="backround" unique_id=630926309]
+z_index = -1
+position = Vector2(487.00003, 354)
+scale = Vector2(20.125, 20.125)
+texture = ExtResource("10_rxbiq")
+
+[node name="cash_counter" type="Label" parent="backround" unique_id=181533297]
+offset_left = 894.0
+offset_top = 282.0
+offset_right = 1063.0
+offset_bottom = 314.0
+text = " • Cash - $0"
+label_settings = SubResource("LabelSettings_fgaav")
+
+[node name="bbcounter" type="Label" parent="backround" unique_id=1633444882]
+visible = false
+offset_left = 893.0
+offset_top = 107.0
+offset_right = 1092.0
+offset_bottom = 135.0
+text = " • Blueberrys - 0"
+label_settings = SubResource("LabelSettings_rrolr")
+
+[node name="bananacounter" type="Label" parent="backround" unique_id=1878131951]
+visible = false
+offset_left = 893.0
+offset_top = 138.0
+offset_right = 1092.0
+offset_bottom = 166.0
+text = " • Bananas - 0"
+label_settings = SubResource("LabelSettings_rrolr")
+
+[node name="watermelloncounter" type="Label" parent="backround" unique_id=1385354772]
+visible = false
+offset_left = 893.0
+offset_top = 173.0
+offset_right = 1092.0
+offset_bottom = 201.0
+text = " • Watermellons - 0"
+label_settings = SubResource("LabelSettings_rrolr")
+
+[node name="pineapplecounter" type="Label" parent="backround" unique_id=1285395689]
+visible = false
+offset_left = 893.0
+offset_top = 205.0
+offset_right = 1099.0
+offset_bottom = 233.0
+text = " • Pineapples - 0"
+label_settings = SubResource("LabelSettings_rrolr")
+
+[node name="buttons" type="Node2D" parent="." unique_id=1691507077]
+
+[node name="Growth speed" type="Button" parent="buttons" unique_id=1979060753]
+offset_left = 230.0
+offset_top = 286.0
+offset_right = 344.0
+offset_bottom = 400.0
+focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="buttons/Growth speed" unique_id=307738605]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 21.0
+offset_right = 105.0
+offset_bottom = 102.0
+text = "Growth 
+speed
+upgrade
+$5"
+label_settings = SubResource("LabelSettings_msgp6")
+
+[node name="Fruit Value" type="Button" parent="buttons" unique_id=2136579442]
+offset_left = 359.0
+offset_top = 286.0
+offset_right = 473.0
+offset_bottom = 400.0
+focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="buttons/Fruit Value" unique_id=599907005]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 23.0
+offset_right = 106.0
+offset_bottom = 104.0
+text = "Fruit
+value
+upgrade
+$8"
+label_settings = SubResource("LabelSettings_msgp6")
+
+[node name="blue berry" type="Button" parent="buttons" unique_id=780329186]
+offset_left = 491.0
+offset_top = 286.0
+offset_right = 605.0
+offset_bottom = 400.0
+focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="buttons/blue berry" unique_id=664820787]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 32.0
+offset_right = 118.0
+offset_bottom = 93.0
+text = "Unlock
+blueberry
+   $10"
+label_settings = SubResource("LabelSettings_msgp6")
+
+[node name="banana" type="Button" parent="buttons" unique_id=1202706344]
+offset_left = 626.0
+offset_top = 288.0
+offset_right = 740.0
+offset_bottom = 402.0
+focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="buttons/banana" unique_id=1245230444]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 29.0
+offset_right = 122.0
+offset_bottom = 90.0
+text = "Unlock
+banana
+   $30"
+label_settings = SubResource("LabelSettings_msgp6")
+
+[node name="watermellon" type="Button" parent="buttons" unique_id=1132246418]
+offset_left = 357.0
+offset_top = 415.0
+offset_right = 471.0
+offset_bottom = 529.0
+focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="buttons/watermellon" unique_id=294707840]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 31.0
+offset_right = 113.0
+offset_bottom = 92.0
+text = "   Unlock
+watermellon
+     $50"
+label_settings = SubResource("LabelSettings_msgp6")
+
+[node name="pineapple" type="Button" parent="buttons" unique_id=2095142659]
+offset_left = 488.0
+offset_top = 413.0
+offset_right = 602.0
+offset_bottom = 527.0
+focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="buttons/pineapple" unique_id=1698582186]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 31.0
+offset_right = 116.0
+offset_bottom = 92.0
+text = " Unlock
+pneapple
+   $100"
+label_settings = SubResource("LabelSettings_msgp6")
+
+[node name="sell" type="Button" parent="buttons" unique_id=1915108528]
+offset_left = 390.0
+offset_top = 549.0
+offset_right = 560.0
+offset_bottom = 630.0
+focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="buttons/sell" unique_id=1989896614]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 25.0
+offset_right = 158.0
+offset_bottom = 55.0
+text = "Sell fruits!"
+label_settings = SubResource("LabelSettings_e23gp")
+
+[node name="shop_txt" type="Label" parent="." unique_id=754366140]
+offset_left = 247.0
+offset_top = 65.0
+offset_right = 704.0
+offset_bottom = 253.0
+text = "SHOP!"
+label_settings = SubResource("LabelSettings_xqmyw")
+
+[connection signal="pressed" from="tree" to="." method="_on_tree_pressed"]
+[connection signal="pressed" from="buttons/Growth speed" to="." method="_on_growth_speed_pressed"]
+[connection signal="pressed" from="buttons/Fruit Value" to="." method="_on_fruit_value_pressed"]
+[connection signal="pressed" from="buttons/blue berry" to="." method="_on_blue_berry_pressed"]
+[connection signal="pressed" from="buttons/banana" to="." method="_on_banana_pressed"]
+[connection signal="pressed" from="buttons/watermellon" to="." method="_on_watermellon_pressed"]
+[connection signal="pressed" from="buttons/pineapple" to="." method="_on_pineapple_pressed"]
+[connection signal="pressed" from="buttons/sell" to="." method="_on_sell_pressed"]

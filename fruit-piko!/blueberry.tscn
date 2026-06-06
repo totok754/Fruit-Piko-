@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://baig3w2q1xoil"]
+
+[ext_resource type="Script" uid="uid://daei6ew01gcqc" path="res://blueberry.gd" id="1_bw5qf"]
+[ext_resource type="Texture2D" uid="uid://c7vepgrwo682h" path="res://Place_holder/Fruits/blueberry.png" id="2_5a6b4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ro10c"]
+atlas = ExtResource("2_5a6b4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xge2c"]
+atlas = ExtResource("2_5a6b4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akyym"]
+atlas = ExtResource("2_5a6b4")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61hbj"]
+atlas = ExtResource("2_5a6b4")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0iq6"]
+atlas = ExtResource("2_5a6b4")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tl1kt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ro10c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xge2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akyym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61hbj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0iq6")
+}],
+"loop": false,
+"name": &"grow",
+"speed": 25.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bw5qf"]
+radius = 25.0
+height = 54.0
+
+[node name="blueberry" type="Node2D" unique_id=1900818532]
+
+[node name="blueberry" type="RigidBody2D" parent="." unique_id=262510555 groups=["Blueberry"]]
+input_pickable = true
+script = ExtResource("1_bw5qf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="blueberry" unique_id=876764201 groups=["Blueberry"]]
+position = Vector2(-1, 3)
+scale = Vector2(2.125, 2.125)
+sprite_frames = SubResource("SpriteFrames_tl1kt")
+animation = &"grow"
+frame = 5
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blueberry" unique_id=1026458044 groups=["Blueberry"]]
+visible = false
+position = Vector2(0, 4)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_bw5qf")
+
+[connection signal="input_event" from="blueberry" to="blueberry" method="_on_input_event"]

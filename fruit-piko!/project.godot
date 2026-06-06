@@ -1,0 +1,37 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Fruit Piko!"
+run/main_scene="uid://dj64qh3d7eya6"
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="uid://bkuga8l3xqid1"
+
+[autoload]
+
+Data="*uid://chbk2n8m24k0l"
+
+[global_group]
+
+Apple=""
+Blueberry=""
+Banana=""
+Watermellon=""
+Pineapple=""
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"

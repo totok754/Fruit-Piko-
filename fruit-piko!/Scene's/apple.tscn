@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://2n67vf5mgp0e"]
+
+[ext_resource type="Script" uid="uid://dt01x4e37l8xo" path="res://Scripts/apple.gd" id="1_y2mtr"]
+[ext_resource type="Texture2D" uid="uid://di5fbopynqins" path="res://Place_holder/Fruits/apple grow ani.png" id="2_coplm"]
+[ext_resource type="Texture2D" uid="uid://he5xfuy18y37" path="res://Place_holder/Fruits/apple.png" id="3_4xpam"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxhif"]
+atlas = ExtResource("2_coplm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nncf"]
+atlas = ExtResource("2_coplm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_boap7"]
+atlas = ExtResource("2_coplm")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flcab"]
+atlas = ExtResource("2_coplm")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5beq"]
+atlas = ExtResource("2_coplm")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7e281"]
+atlas = ExtResource("3_4xpam")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y2mtr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxhif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nncf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_boap7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_flcab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5beq")
+}],
+"loop": false,
+"name": &"grow",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e281")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_coplm"]
+size = Vector2(56, 54)
+
+[node name="Apple" type="Node2D" unique_id=485567941]
+
+[node name="apple" type="RigidBody2D" parent="." unique_id=1303760954 groups=["Apple"]]
+input_pickable = true
+script = ExtResource("1_y2mtr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="apple" unique_id=1744091114 groups=["Apple"]]
+position = Vector2(-1, 3)
+scale = Vector2(2.125, 2.125)
+sprite_frames = SubResource("SpriteFrames_y2mtr")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="apple" unique_id=1807780323 groups=["Apple"]]
+visible = false
+position = Vector2(-1, 2)
+shape = SubResource("RectangleShape2D_coplm")
+
+[connection signal="input_event" from="apple" to="apple" method="_on_input_event"]
