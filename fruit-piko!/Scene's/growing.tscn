@@ -457,6 +457,12 @@ visible = false
 position = Vector2(56, 42)
 shape = SubResource("RectangleShape2D_fmrhl")
 
+[node name="List" type="AudioStreamPlayer2D" parent="pineapple_box" unique_id=285735375]
+position = Vector2(-37, -538)
+stream = ExtResource("24_nr1pb")
+volume_db = -11.719
+pitch_scale = 1.23
+
 [node name="Backround" type="Sprite2D" parent="." unique_id=285245898]
 modulate = Color(0.74978, 0.74978, 0.74977994, 1)
 z_index = -9
