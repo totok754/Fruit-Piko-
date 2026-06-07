@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://baig3w2q1xoil"]
+
+[ext_resource type="Script" uid="uid://daei6ew01gcqc" path="res://Scripts/blueberry.gd" id="1_bw5qf"]
+[ext_resource type="Texture2D" uid="uid://cdui2n8fiqd54" path="res://Sprites/Blueberry (2).png" id="2_74m0t"]
+[ext_resource type="AudioStream" uid="uid://dhbhjyoj5gbxt" path="res://sfx/pick.mp3" id="3_7nes4"]
+[ext_resource type="AudioStream" uid="uid://bdru0tut40oc0" path="res://sfx/throw.mp3" id="4_fynej"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nes4"]
+atlas = ExtResource("2_74m0t")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fynej"]
+atlas = ExtResource("2_74m0t")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uww6v"]
+atlas = ExtResource("2_74m0t")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tl1kt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nes4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fynej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uww6v")
+}],
+"loop": false,
+"name": &"grow",
+"speed": 25.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bw5qf"]
+radius = 16.0
+height = 48.0
+
+[node name="blueberry" type="Node2D" unique_id=1900818532]
+
+[node name="blueberry" type="RigidBody2D" parent="." unique_id=262510555 groups=["Blueberry"]]
+input_pickable = true
+script = ExtResource("1_bw5qf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="blueberry" unique_id=876764201 groups=["Blueberry"]]
+position = Vector2(-1, 3)
+scale = Vector2(2.125, 2.125)
+sprite_frames = SubResource("SpriteFrames_tl1kt")
+animation = &"grow"
+frame = 3
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blueberry" unique_id=1026458044 groups=["Blueberry"]]
+position = Vector2(-1, 5)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_bw5qf")
+
+[node name="Pick" type="AudioStreamPlayer2D" parent="blueberry" unique_id=749329893]
+position = Vector2(-1, 2)
+stream = ExtResource("3_7nes4")
+volume_db = 8.748
+pitch_scale = 1.39
+
+[node name="Throw" type="AudioStreamPlayer2D" parent="blueberry" unique_id=707080254]
+position = Vector2(-2, -1)
+stream = ExtResource("4_fynej")
+volume_db = -16.523
+pitch_scale = 1.78
+
+[connection signal="input_event" from="blueberry" to="blueberry" method="_on_input_event"]

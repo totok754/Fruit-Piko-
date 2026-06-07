@@ -6,6 +6,16 @@ var bananatotalsell = 0
 var watermellontotalsell = 0
 var pptotalsell = 0
 
+func _ready() -> void:
+	if Data.blueberryunlocked:
+		$backround/bbcounter.show()
+	if Data.bananaunlocked:
+		$backround/bananacounter.show()
+	if Data.watermellonunlocked:
+		$backround/watermelloncounter.show()
+	if Data.pineappleunlocked:
+		$backround/pineapplecounter.show()
+
 
 func _physics_process(delta: float) -> void:
 	$backround/Apple_counter.text = " • Apples - " + (str(Data.Apples))

@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://ca8yemtgk8mpd"]
 
 [ext_resource type="Script" uid="uid://biorr538jkup0" path="res://Scripts/shop.gd" id="1_pjqej"]
-[ext_resource type="Texture2D" uid="uid://ec04i014nnjd" path="res://Place_holder/shopb.png" id="2_6vpi8"]
-[ext_resource type="Texture2D" uid="uid://bq1m4abk7dyl7" path="res://Place_holder/boxs/shopbba.png" id="3_wr1l8"]
-[ext_resource type="Texture2D" uid="uid://bm6i05pfqvkuc" path="res://Place_holder/shopbh.png" id="4_qo7yf"]
+[ext_resource type="Texture2D" uid="uid://co2lpi15eqbeh" path="res://Sprites/button1.png" id="2_xmgch"]
+[ext_resource type="Texture2D" uid="uid://b0llm6kj1h1k2" path="res://Sprites/button1h.png" id="3_pjqej"]
+[ext_resource type="Texture2D" uid="uid://clcqcibxg0hs1" path="res://Sprites/BACKROUND2.png" id="5_6vpi8"]
 [ext_resource type="FontFile" uid="uid://cvdmj41qc8leu" path="res://fruit_piko_font.ttf" id="5_ju5wf"]
-[ext_resource type="Texture2D" uid="uid://bfgi6il05ymn7" path="res://Place_holder/buttton.png" id="6_di81v"]
-[ext_resource type="Texture2D" uid="uid://cshrfunj6tabu" path="res://Place_holder/sellb.png" id="7_3q3f7"]
-[ext_resource type="Texture2D" uid="uid://bgt2xjvkueq6v" path="res://Place_holder/sky2.png" id="8_vcxuf"]
+[ext_resource type="Texture2D" uid="uid://bd6wf1qdd170x" path="res://Sprites/button2.png" id="8_wr1l8"]
 [ext_resource type="Texture2D" uid="uid://d03fhr851sr37" path="res://Place_holder/list.png" id="9_7rv6t"]
+[ext_resource type="Texture2D" uid="uid://b4kexbq4x88s8" path="res://Sprites/button2h.png" id="9_qo7yf"]
+[ext_resource type="Texture2D" uid="uid://ddnkkjbe7kuqq" path="res://Sprites/button3.png" id="10_ju5wf"]
 [ext_resource type="Texture2D" uid="uid://cyqpyk1ri8yrm" path="res://Place_holder/shop.png" id="10_rxbiq"]
+[ext_resource type="Texture2D" uid="uid://dn03b0jwgvumt" path="res://Sprites/button3h.png" id="11_di81v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sw5c6"]
 font = ExtResource("5_ju5wf")
@@ -39,7 +40,7 @@ font_color = Color(0.5809981, 0.7851324, 0.4835809, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_e23gp"]
 font = ExtResource("5_ju5wf")
 font_size = 24
-font_color = Color(0.2162449, 0.32383183, 0.16261166, 1)
+font_color = Color(0.7320526, 0.9096993, 0.65003526, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_xqmyw"]
 font = ExtResource("5_ju5wf")
@@ -50,69 +51,32 @@ font_color = Color(0, 0, 0, 1)
 script = ExtResource("1_pjqej")
 
 [node name="tree" type="TextureButton" parent="." unique_id=262929069]
-offset_left = 24.0
-offset_top = -4.0
-offset_right = 199.0
-offset_bottom = 171.0
-texture_normal = ExtResource("2_6vpi8")
-texture_pressed = ExtResource("3_wr1l8")
-texture_hover = ExtResource("4_qo7yf")
+offset_left = -8.0
+offset_top = -7.0
+offset_right = 264.0
+offset_bottom = 148.0
+texture_normal = ExtResource("2_xmgch")
+texture_pressed = ExtResource("2_xmgch")
+texture_hover = ExtResource("3_pjqej")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="tree" unique_id=572090903]
 layout_mode = 0
-offset_left = 25.0
-offset_top = 69.0
-offset_right = 151.0
-offset_bottom = 103.0
+offset_left = 69.0
+offset_top = 64.0
+offset_right = 195.0
+offset_bottom = 98.0
 text = "To tree!"
 label_settings = SubResource("LabelSettings_sw5c6")
-
-[node name="button_ui" type="Node2D" parent="." unique_id=1985252737]
-
-[node name="Buttton" type="Sprite2D" parent="button_ui" unique_id=1198543187]
-position = Vector2(309.75, 331.75)
-scale = Vector2(11.296876, 11.296876)
-texture = ExtResource("6_di81v")
-
-[node name="Buttton2" type="Sprite2D" parent="button_ui" unique_id=1150813999]
-position = Vector2(438.75, 331.75)
-scale = Vector2(11.296876, 11.296876)
-texture = ExtResource("6_di81v")
-
-[node name="Buttton3" type="Sprite2D" parent="button_ui" unique_id=1790639660]
-position = Vector2(570.75, 331.75)
-scale = Vector2(11.296876, 11.296876)
-texture = ExtResource("6_di81v")
-
-[node name="Buttton4" type="Sprite2D" parent="button_ui" unique_id=1685863407]
-position = Vector2(706.75, 331.75)
-scale = Vector2(11.296876, 11.296876)
-texture = ExtResource("6_di81v")
-
-[node name="Buttton5" type="Sprite2D" parent="button_ui" unique_id=1959382844]
-position = Vector2(434.75, 458.75)
-scale = Vector2(11.296876, 11.296876)
-texture = ExtResource("6_di81v")
-
-[node name="Buttton6" type="Sprite2D" parent="button_ui" unique_id=179909412]
-position = Vector2(567.75, 457.75)
-scale = Vector2(11.296876, 11.296876)
-texture = ExtResource("6_di81v")
-
-[node name="Sellb" type="Sprite2D" parent="button_ui" unique_id=1843615641]
-position = Vector2(479, 576)
-scale = Vector2(8.937498, 8.937498)
-texture = ExtResource("7_3q3f7")
 
 [node name="backround" type="Node2D" parent="." unique_id=1973597109]
 
 [node name="Sky" type="Sprite2D" parent="backround" unique_id=1275475158]
 z_index = -3
-position = Vector2(588, 342.5)
-scale = Vector2(37.125, 21.96875)
-texture = ExtResource("8_vcxuf")
+position = Vector2(572.4922, 342.73047)
+scale = Vector2(3.9499483, 4.117305)
+texture = ExtResource("5_6vpi8")
 
 [node name="List" type="Sprite2D" parent="backround" unique_id=1904285534]
 position = Vector2(989.00006, 159)
@@ -150,7 +114,6 @@ text = " • Cash - $0"
 label_settings = SubResource("LabelSettings_fgaav")
 
 [node name="bbcounter" type="Label" parent="backround" unique_id=1633444882]
-visible = false
 offset_left = 893.0
 offset_top = 107.0
 offset_right = 1092.0
@@ -159,7 +122,6 @@ text = " • Blueberrys - 0"
 label_settings = SubResource("LabelSettings_rrolr")
 
 [node name="bananacounter" type="Label" parent="backround" unique_id=1878131951]
-visible = false
 offset_left = 893.0
 offset_top = 138.0
 offset_right = 1092.0
@@ -168,7 +130,6 @@ text = " • Bananas - 0"
 label_settings = SubResource("LabelSettings_rrolr")
 
 [node name="watermelloncounter" type="Label" parent="backround" unique_id=1385354772]
-visible = false
 offset_left = 893.0
 offset_top = 173.0
 offset_right = 1092.0
@@ -177,7 +138,6 @@ text = " • Watermellons - 0"
 label_settings = SubResource("LabelSettings_rrolr")
 
 [node name="pineapplecounter" type="Label" parent="backround" unique_id=1285395689]
-visible = false
 offset_left = 893.0
 offset_top = 205.0
 offset_right = 1099.0
@@ -187,136 +147,174 @@ label_settings = SubResource("LabelSettings_rrolr")
 
 [node name="buttons" type="Node2D" parent="." unique_id=1691507077]
 
-[node name="Growth speed" type="Button" parent="buttons" unique_id=1979060753]
-offset_left = 230.0
-offset_top = 286.0
-offset_right = 344.0
-offset_bottom = 400.0
+[node name="Growth speed" type="TextureButton" parent="buttons" unique_id=1152952148]
+offset_left = 223.0
+offset_top = 269.0
+offset_right = 339.20502
+offset_bottom = 390.49
+pivot_offset = Vector2(1, 1)
 focus_mode = 0
-flat = true
+texture_normal = ExtResource("8_wr1l8")
+texture_pressed = ExtResource("8_wr1l8")
+texture_hover = ExtResource("9_qo7yf")
+ignore_texture_size = true
+stretch_mode = 3
 
 [node name="Label" type="Label" parent="buttons/Growth speed" unique_id=307738605]
 layout_mode = 0
-offset_left = 15.0
-offset_top = 21.0
-offset_right = 105.0
-offset_bottom = 102.0
+offset_left = 23.0
+offset_top = 36.0
+offset_right = 113.0
+offset_bottom = 117.0
 text = "Growth 
 speed
 upgrade
 $5"
 label_settings = SubResource("LabelSettings_msgp6")
 
-[node name="Fruit Value" type="Button" parent="buttons" unique_id=2136579442]
-offset_left = 359.0
-offset_top = 286.0
-offset_right = 473.0
-offset_bottom = 400.0
+[node name="Fruit Value" type="TextureButton" parent="buttons" unique_id=523185264]
+offset_left = 364.0
+offset_top = 266.0
+offset_right = 480.20502
+offset_bottom = 387.49
+pivot_offset = Vector2(1, 1)
 focus_mode = 0
-flat = true
+texture_normal = ExtResource("8_wr1l8")
+texture_pressed = ExtResource("8_wr1l8")
+texture_hover = ExtResource("9_qo7yf")
+ignore_texture_size = true
+stretch_mode = 3
 
 [node name="Label" type="Label" parent="buttons/Fruit Value" unique_id=599907005]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 23.0
-offset_right = 106.0
-offset_bottom = 104.0
+offset_left = 26.0
+offset_top = 31.0
+offset_right = 116.0
+offset_bottom = 112.0
 text = "Fruit
 value
 upgrade
 $8"
 label_settings = SubResource("LabelSettings_msgp6")
 
-[node name="blue berry" type="Button" parent="buttons" unique_id=780329186]
-offset_left = 491.0
-offset_top = 286.0
-offset_right = 605.0
-offset_bottom = 400.0
+[node name="blue berry" type="TextureButton" parent="buttons" unique_id=361347060]
+offset_left = 511.0
+offset_top = 263.0
+offset_right = 627.205
+offset_bottom = 384.49
+pivot_offset = Vector2(1, 1)
 focus_mode = 0
-flat = true
+texture_normal = ExtResource("8_wr1l8")
+texture_pressed = ExtResource("8_wr1l8")
+texture_hover = ExtResource("9_qo7yf")
+ignore_texture_size = true
+stretch_mode = 3
 
 [node name="Label" type="Label" parent="buttons/blue berry" unique_id=664820787]
 layout_mode = 0
-offset_left = 28.0
-offset_top = 32.0
-offset_right = 118.0
-offset_bottom = 93.0
+offset_left = 24.0
+offset_top = 43.0
+offset_right = 114.0
+offset_bottom = 104.0
 text = "Unlock
 blueberry
    $10"
 label_settings = SubResource("LabelSettings_msgp6")
 
-[node name="banana" type="Button" parent="buttons" unique_id=1202706344]
-offset_left = 626.0
-offset_top = 288.0
-offset_right = 740.0
-offset_bottom = 402.0
+[node name="banana" type="TextureButton" parent="buttons" unique_id=157351795]
+anchors_preset = -1
+offset_left = 645.0
+offset_top = 265.0
+offset_right = 761.205
+offset_bottom = 386.49
+pivot_offset = Vector2(1, 1)
 focus_mode = 0
-flat = true
+texture_normal = ExtResource("8_wr1l8")
+texture_pressed = ExtResource("8_wr1l8")
+texture_hover = ExtResource("9_qo7yf")
+ignore_texture_size = true
+stretch_mode = 3
 
 [node name="Label" type="Label" parent="buttons/banana" unique_id=1245230444]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 29.0
-offset_right = 122.0
-offset_bottom = 90.0
+offset_left = 28.0
+offset_top = 41.0
+offset_right = 118.0
+offset_bottom = 102.0
 text = "Unlock
 banana
    $30"
 label_settings = SubResource("LabelSettings_msgp6")
 
-[node name="watermellon" type="Button" parent="buttons" unique_id=1132246418]
-offset_left = 357.0
-offset_top = 415.0
-offset_right = 471.0
-offset_bottom = 529.0
+[node name="watermellon" type="TextureButton" parent="buttons" unique_id=105982756]
+offset_left = 362.0
+offset_top = 392.0
+offset_right = 478.20502
+offset_bottom = 513.49
+pivot_offset = Vector2(1, 1)
 focus_mode = 0
-flat = true
+texture_normal = ExtResource("8_wr1l8")
+texture_pressed = ExtResource("8_wr1l8")
+texture_hover = ExtResource("9_qo7yf")
+ignore_texture_size = true
+stretch_mode = 3
 
 [node name="Label" type="Label" parent="buttons/watermellon" unique_id=294707840]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 31.0
-offset_right = 113.0
-offset_bottom = 92.0
+offset_left = 16.0
+offset_top = 41.0
+offset_right = 118.0
+offset_bottom = 102.0
 text = "   Unlock
 watermellon
      $50"
 label_settings = SubResource("LabelSettings_msgp6")
 
-[node name="pineapple" type="Button" parent="buttons" unique_id=2095142659]
-offset_left = 488.0
-offset_top = 413.0
-offset_right = 602.0
-offset_bottom = 527.0
+[node name="pineapple" type="TextureButton" parent="buttons" unique_id=1970358509]
+offset_left = 512.0
+offset_top = 392.0
+offset_right = 628.205
+offset_bottom = 513.49
+pivot_offset = Vector2(1, 1)
 focus_mode = 0
-flat = true
+texture_normal = ExtResource("8_wr1l8")
+texture_pressed = ExtResource("8_wr1l8")
+texture_hover = ExtResource("9_qo7yf")
+ignore_texture_size = true
+stretch_mode = 3
 
 [node name="Label" type="Label" parent="buttons/pineapple" unique_id=1698582186]
 layout_mode = 0
-offset_left = 26.0
-offset_top = 31.0
-offset_right = 116.0
-offset_bottom = 92.0
+offset_left = 24.0
+offset_top = 39.0
+offset_right = 114.0
+offset_bottom = 100.0
 text = " Unlock
 pneapple
    $100"
 label_settings = SubResource("LabelSettings_msgp6")
 
-[node name="sell" type="Button" parent="buttons" unique_id=1915108528]
-offset_left = 390.0
-offset_top = 549.0
-offset_right = 560.0
-offset_bottom = 630.0
+[node name="sell" type="TextureButton" parent="buttons" unique_id=1646729869]
+offset_left = 345.0
+offset_top = 517.0
+offset_right = 542.565
+offset_bottom = 625.145
+scale = Vector2(1.445133, 1.1561915)
+pivot_offset = Vector2(1, 1)
 focus_mode = 0
-flat = true
+texture_normal = ExtResource("10_ju5wf")
+texture_pressed = ExtResource("10_ju5wf")
+texture_hover = ExtResource("11_di81v")
+ignore_texture_size = true
+stretch_mode = 3
 
 [node name="Label" type="Label" parent="buttons/sell" unique_id=1989896614]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 25.0
-offset_right = 158.0
-offset_bottom = 55.0
+offset_left = 37.67482
+offset_top = 45.110332
+offset_right = 183.67482
+offset_bottom = 75.11034
+scale = Vector2(0.633921, 0.9205329)
 text = "Sell fruits!"
 label_settings = SubResource("LabelSettings_e23gp")
 

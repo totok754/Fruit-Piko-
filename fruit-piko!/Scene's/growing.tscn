@@ -1,21 +1,29 @@
 [gd_scene format=3 uid="uid://dj64qh3d7eya6"]
 
 [ext_resource type="Script" uid="uid://b2mbgq81a8p2l" path="res://Scripts/growing.gd" id="1_kxdq6"]
-[ext_resource type="Texture2D" uid="uid://crsylux0b3f63" path="res://Place_holder/sky.png" id="2_oimqp"]
 [ext_resource type="PackedScene" uid="uid://2n67vf5mgp0e" path="res://Scene's/apple.tscn" id="2_rs3i1"]
-[ext_resource type="Texture2D" uid="uid://bk8n06letvb0g" path="res://Place_holder/tree.png" id="3_bwy8e"]
-[ext_resource type="PackedScene" uid="uid://baig3w2q1xoil" path="res://blueberry.tscn" id="3_fmrhl"]
-[ext_resource type="PackedScene" uid="uid://ioebyqxwnlr5" path="res://banana.tscn" id="4_qva17"]
+[ext_resource type="PackedScene" uid="uid://baig3w2q1xoil" path="res://Scene's/blueberry.tscn" id="3_fmrhl"]
+[ext_resource type="PackedScene" uid="uid://ioebyqxwnlr5" path="res://Scene's/banana.tscn" id="4_qva17"]
 [ext_resource type="Texture2D" uid="uid://d03fhr851sr37" path="res://Place_holder/list.png" id="4_rs3i1"]
-[ext_resource type="PackedScene" uid="uid://kscqowtxg60s" path="res://watermellon.tscn" id="5_emnxi"]
+[ext_resource type="PackedScene" uid="uid://kscqowtxg60s" path="res://Scene's/watermellon.tscn" id="5_emnxi"]
 [ext_resource type="FontFile" uid="uid://cvdmj41qc8leu" path="res://fruit_piko_font.ttf" id="5_rhc6o"]
-[ext_resource type="PackedScene" uid="uid://t4sp0mccbs8t" path="res://pineapple.tscn" id="6_0y3a0"]
+[ext_resource type="PackedScene" uid="uid://t4sp0mccbs8t" path="res://Scene's/pineapple.tscn" id="6_0y3a0"]
 [ext_resource type="Script" uid="uid://odl6qs258hn6" path="res://Scripts/apple_box.gd" id="7_jtd6v"]
 [ext_resource type="Texture2D" uid="uid://srukcurs4li" path="res://Place_holder/boxs/apple_box_front.png" id="8_sp3u5"]
 [ext_resource type="Texture2D" uid="uid://c03o3mu4ymlil" path="res://Place_holder/boxs/apple_box_back.png" id="9_jsx6o"]
-[ext_resource type="Texture2D" uid="uid://ec04i014nnjd" path="res://Place_holder/shopb.png" id="10_sp3u5"]
-[ext_resource type="Texture2D" uid="uid://bq1m4abk7dyl7" path="res://Place_holder/boxs/shopbba.png" id="11_idcci"]
-[ext_resource type="Texture2D" uid="uid://bm6i05pfqvkuc" path="res://Place_holder/shopbh.png" id="12_nu58s"]
+[ext_resource type="Texture2D" uid="uid://co2lpi15eqbeh" path="res://Sprites/button1.png" id="12_3coq6"]
+[ext_resource type="Texture2D" uid="uid://b0llm6kj1h1k2" path="res://Sprites/button1h.png" id="13_7qwu2"]
+[ext_resource type="Script" uid="uid://0oa7kov8mlp1" path="res://Scene's/blueberry_box.gd" id="17_emnxi"]
+[ext_resource type="Texture2D" uid="uid://4l4ot1ff0xji" path="res://Place_holder/boxs/blueberry_box_front.png" id="18_0y3a0"]
+[ext_resource type="Script" uid="uid://h0oxue33h5em" path="res://Scene's/banana_box.gd" id="19_23xm7"]
+[ext_resource type="Texture2D" uid="uid://dn6tcx615j8tv" path="res://Place_holder/boxs/banana_box_front.png" id="20_x6xai"]
+[ext_resource type="Texture2D" uid="uid://c00cp0cob8esq" path="res://Place_holder/boxs/wm_box_front.png" id="21_7qwu2"]
+[ext_resource type="Script" uid="uid://dhvln6cpq13ex" path="res://Scene's/watermellon_box.gd" id="21_bfbvh"]
+[ext_resource type="Script" uid="uid://ckm0834xilfms" path="res://Scene's/pineapple_box.gd" id="22_bfbvh"]
+[ext_resource type="Texture2D" uid="uid://bct5tgf1mwymr" path="res://Sprites/backround.png" id="22_nr1pb"]
+[ext_resource type="Texture2D" uid="uid://d11yq0ev8mie" path="res://Place_holder/boxs/pineapple_box_front.png" id="23_nr1pb"]
+[ext_resource type="AudioStream" uid="uid://c6yg8q8mchpuw" path="res://sfx/list.mp3" id="24_nr1pb"]
+[ext_resource type="AudioStream" uid="uid://dhbhjyoj5gbxt" path="res://sfx/pick.mp3" id="25_fo57i"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4r0vl"]
 font = ExtResource("5_rhc6o")
@@ -65,22 +73,10 @@ script = ExtResource("1_kxdq6")
 apple_scene = ExtResource("2_rs3i1")
 blueberry_scene = ExtResource("3_fmrhl")
 banana_scene = ExtResource("4_qva17")
-watermellon_scene = ExtResource("5_emnxi")
+watermelon_scene = ExtResource("5_emnxi")
 pineapple_scene = ExtResource("6_0y3a0")
 
 [node name="backround" type="Node2D" parent="." unique_id=1183836974]
-
-[node name="Sky" type="Sprite2D" parent="backround" unique_id=1834710839]
-modulate = Color(0.8560673, 0.8560673, 0.85606724, 1)
-z_index = -300
-position = Vector2(576.5, 325.5)
-scale = Vector2(36.40625, 20.65625)
-texture = ExtResource("2_oimqp")
-
-[node name="Tree" type="Sprite2D" parent="backround" unique_id=707493100]
-position = Vector2(590, 373)
-scale = Vector2(18.125, 18.125)
-texture = ExtResource("3_bwy8e")
 
 [node name="List" type="Sprite2D" parent="backround" unique_id=280930787]
 position = Vector2(989.00006, 159)
@@ -147,22 +143,22 @@ offset_bottom = 233.0
 text = " • Pineapples - 0"
 label_settings = SubResource("LabelSettings_nu58s")
 
-[node name="border" type="StaticBody2D" parent="." unique_id=2098692334]
+[node name="border" type="StaticBody2D" parent="." unique_id=2098692334 groups=["Border"]]
 visible = false
 
-[node name="left" type="CollisionShape2D" parent="border" unique_id=1626587800]
+[node name="left" type="CollisionShape2D" parent="border" unique_id=1626587800 groups=["Border"]]
 position = Vector2(-84.5625, 334.75)
 shape = SubResource("RectangleShape2D_jsx6o")
 
-[node name="right" type="CollisionShape2D" parent="border" unique_id=45024902]
+[node name="right" type="CollisionShape2D" parent="border" unique_id=45024902 groups=["Border"]]
 position = Vector2(1240.4688, 340)
 shape = SubResource("RectangleShape2D_jsx6o")
 
-[node name="top" type="CollisionShape2D" parent="border" unique_id=2060661308]
+[node name="top" type="CollisionShape2D" parent="border" unique_id=2060661308 groups=["Border"]]
 position = Vector2(611, -37.523438)
 shape = SubResource("RectangleShape2D_idcci")
 
-[node name="bottom" type="CollisionShape2D" parent="border" unique_id=2104847271]
+[node name="bottom" type="CollisionShape2D" parent="border" unique_id=2104847271 groups=["Border"]]
 position = Vector2(582, 683.4531)
 shape = SubResource("RectangleShape2D_idcci")
 
@@ -188,7 +184,7 @@ position = Vector2(611, 210)
 position = Vector2(442, 350)
 
 [node name="spawn7" type="Marker2D" parent="Spawn_points" unique_id=285677443]
-position = Vector2(785, 109)
+position = Vector2(628, 298)
 
 [node name="spawn8" type="Marker2D" parent="Spawn_points" unique_id=1059059990]
 position = Vector2(718, 333)
@@ -211,8 +207,8 @@ position = Vector2(394, 228)
 [node name="spawn14" type="Marker2D" parent="Spawn_points" unique_id=1074213954]
 position = Vector2(512, 257)
 
-[node name="apple_box" type="StaticBody2D" parent="." unique_id=393210211]
-position = Vector2(99, 551)
+[node name="apple_box" type="StaticBody2D" parent="." unique_id=393210211 groups=["Border"]]
+position = Vector2(30, 551)
 script = ExtResource("7_jtd6v")
 
 [node name="front" type="Sprite2D" parent="apple_box" unique_id=168328567]
@@ -227,20 +223,20 @@ position = Vector2(60, -6)
 scale = Vector2(4.906, 4.906)
 texture = ExtResource("9_jsx6o")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="apple_box" unique_id=1067558524]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="apple_box" unique_id=1067558524 groups=["Border"]]
 visible = false
 position = Vector2(-0.99999976, 17)
 rotation = 0.1374223
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_nu58s")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="apple_box" unique_id=1919866408]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="apple_box" unique_id=1919866408 groups=["Border"]]
 visible = false
 position = Vector2(124, 19)
 rotation = -0.11216995
 shape = SubResource("RectangleShape2D_887uc")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="apple_box" unique_id=941894279]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="apple_box" unique_id=941894279 groups=["Border"]]
 visible = false
 position = Vector2(61, 52.5)
 shape = SubResource("RectangleShape2D_klx14")
@@ -252,25 +248,230 @@ visible = false
 position = Vector2(56, 42)
 shape = SubResource("RectangleShape2D_fmrhl")
 
+[node name="List" type="AudioStreamPlayer2D" parent="apple_box" unique_id=1347063861]
+position = Vector2(-37, -538)
+stream = ExtResource("24_nr1pb")
+volume_db = -11.719
+pitch_scale = 1.23
+
 [node name="shop" type="TextureButton" parent="." unique_id=528980846]
-offset_left = 24.0
-offset_top = -4.0
-offset_right = 199.0
-offset_bottom = 171.0
-texture_normal = ExtResource("10_sp3u5")
-texture_pressed = ExtResource("11_idcci")
-texture_hover = ExtResource("12_nu58s")
+offset_left = -8.0
+offset_top = 7.0
+offset_right = 246.0
+offset_bottom = 141.0
+scale = Vector2(1.0553559, 1.1135646)
+texture_normal = ExtResource("12_3coq6")
+texture_pressed = ExtResource("12_3coq6")
+texture_hover = ExtResource("13_7qwu2")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="shop" unique_id=1077285451]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 69.0
-offset_right = 147.0
-offset_bottom = 103.0
+offset_left = 63.0
+offset_top = 54.0
+offset_right = 189.0
+offset_bottom = 88.0
 text = "To shop!"
 label_settings = SubResource("LabelSettings_jsx6o")
 
+[node name="blueberry_box" type="StaticBody2D" parent="." unique_id=727656886]
+position = Vector2(194, 551)
+script = ExtResource("17_emnxi")
+
+[node name="front" type="Sprite2D" parent="blueberry_box" unique_id=1505122732]
+z_index = 1
+position = Vector2(60, -6)
+scale = Vector2(4.90625, 4.90625)
+texture = ExtResource("18_0y3a0")
+
+[node name="back" type="Sprite2D" parent="blueberry_box" unique_id=2142384346]
+z_index = -2
+position = Vector2(60, -6)
+scale = Vector2(4.906, 4.906)
+texture = ExtResource("9_jsx6o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blueberry_box" unique_id=1956468595 groups=["Border"]]
+visible = false
+position = Vector2(-0.99999976, 17)
+rotation = 0.1374223
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_nu58s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="blueberry_box" unique_id=1473360363 groups=["Border"]]
+visible = false
+position = Vector2(124, 19)
+rotation = -0.11216995
+shape = SubResource("RectangleShape2D_887uc")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="blueberry_box" unique_id=858349626 groups=["Border"]]
+visible = false
+position = Vector2(61, 52.5)
+shape = SubResource("RectangleShape2D_klx14")
+
+[node name="collecter" type="Area2D" parent="blueberry_box" unique_id=22050629]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blueberry_box/collecter" unique_id=1193769336]
+visible = false
+position = Vector2(56, 42)
+shape = SubResource("RectangleShape2D_fmrhl")
+
+[node name="List" type="AudioStreamPlayer2D" parent="blueberry_box" unique_id=58745285]
+position = Vector2(-37, -538)
+stream = ExtResource("24_nr1pb")
+volume_db = -11.719
+pitch_scale = 1.23
+
+[node name="banana_box" type="StaticBody2D" parent="." unique_id=1891475676]
+position = Vector2(976, 551)
+script = ExtResource("19_23xm7")
+
+[node name="front" type="Sprite2D" parent="banana_box" unique_id=1461654230]
+z_index = 1
+position = Vector2(60, -6)
+scale = Vector2(4.90625, 4.90625)
+texture = ExtResource("20_x6xai")
+
+[node name="back" type="Sprite2D" parent="banana_box" unique_id=499881877]
+z_index = -2
+position = Vector2(60, -6)
+scale = Vector2(4.906, 4.906)
+texture = ExtResource("9_jsx6o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="banana_box" unique_id=641039379 groups=["Border"]]
+visible = false
+position = Vector2(-0.99999976, 17)
+rotation = 0.1374223
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_nu58s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="banana_box" unique_id=1134196110 groups=["Border"]]
+visible = false
+position = Vector2(124, 19)
+rotation = -0.11216995
+shape = SubResource("RectangleShape2D_887uc")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="banana_box" unique_id=1053536031 groups=["Border"]]
+visible = false
+position = Vector2(61, 52.5)
+shape = SubResource("RectangleShape2D_klx14")
+
+[node name="collecter" type="Area2D" parent="banana_box" unique_id=839023117]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="banana_box/collecter" unique_id=53446947]
+visible = false
+position = Vector2(56, 42)
+shape = SubResource("RectangleShape2D_fmrhl")
+
+[node name="List" type="AudioStreamPlayer2D" parent="banana_box" unique_id=1740682839]
+position = Vector2(-37, -538)
+stream = ExtResource("24_nr1pb")
+volume_db = -11.719
+pitch_scale = 1.23
+
+[node name="watermellon_box" type="StaticBody2D" parent="." unique_id=1192298229]
+position = Vector2(658, 551)
+script = ExtResource("21_bfbvh")
+
+[node name="front" type="Sprite2D" parent="watermellon_box" unique_id=378877250]
+z_index = 1
+position = Vector2(60, -6)
+scale = Vector2(4.90625, 4.90625)
+texture = ExtResource("21_7qwu2")
+
+[node name="back" type="Sprite2D" parent="watermellon_box" unique_id=82828688]
+z_index = -2
+position = Vector2(60, -6)
+scale = Vector2(4.906, 4.906)
+texture = ExtResource("9_jsx6o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="watermellon_box" unique_id=276428699 groups=["Border"]]
+visible = false
+position = Vector2(-0.99999976, 17)
+rotation = 0.1374223
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_nu58s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="watermellon_box" unique_id=1223266244 groups=["Border"]]
+visible = false
+position = Vector2(124, 19)
+rotation = -0.11216995
+shape = SubResource("RectangleShape2D_887uc")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="watermellon_box" unique_id=1156628609 groups=["Border"]]
+visible = false
+position = Vector2(61, 52.5)
+shape = SubResource("RectangleShape2D_klx14")
+
+[node name="collecter" type="Area2D" parent="watermellon_box" unique_id=1825342513]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="watermellon_box/collecter" unique_id=190945715]
+visible = false
+position = Vector2(56, 42)
+shape = SubResource("RectangleShape2D_fmrhl")
+
+[node name="List" type="AudioStreamPlayer2D" parent="watermellon_box" unique_id=1421453720]
+position = Vector2(-37, -538)
+stream = ExtResource("24_nr1pb")
+volume_db = -11.719
+pitch_scale = 1.23
+
+[node name="pineapple_box" type="StaticBody2D" parent="." unique_id=259415089]
+position = Vector2(820, 551)
+script = ExtResource("22_bfbvh")
+
+[node name="front" type="Sprite2D" parent="pineapple_box" unique_id=1470479980]
+z_index = 1
+position = Vector2(60, -6)
+scale = Vector2(4.90625, 4.90625)
+texture = ExtResource("23_nr1pb")
+
+[node name="back" type="Sprite2D" parent="pineapple_box" unique_id=772073837]
+z_index = -2
+position = Vector2(60, -6)
+scale = Vector2(4.906, 4.906)
+texture = ExtResource("9_jsx6o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pineapple_box" unique_id=536945431 groups=["Border"]]
+visible = false
+position = Vector2(-0.99999976, 17)
+rotation = 0.1374223
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_nu58s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="pineapple_box" unique_id=1996211767 groups=["Border"]]
+visible = false
+position = Vector2(124, 19)
+rotation = -0.11216995
+shape = SubResource("RectangleShape2D_887uc")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="pineapple_box" unique_id=1545579832 groups=["Border"]]
+visible = false
+position = Vector2(61, 52.5)
+shape = SubResource("RectangleShape2D_klx14")
+
+[node name="collecter" type="Area2D" parent="pineapple_box" unique_id=177035659]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pineapple_box/collecter" unique_id=1967510984]
+visible = false
+position = Vector2(56, 42)
+shape = SubResource("RectangleShape2D_fmrhl")
+
+[node name="Backround" type="Sprite2D" parent="." unique_id=285245898]
+modulate = Color(0.74978, 0.74978, 0.74977994, 1)
+z_index = -9
+position = Vector2(572.75, 364)
+scale = Vector2(3.8983335, 3.85)
+texture = ExtResource("22_nr1pb")
+
+[node name="picksound" type="AudioStreamPlayer2D" parent="." unique_id=1528044911]
+stream = ExtResource("25_fo57i")
+volume_db = 5.832
+pitch_scale = 1.71
+
 [connection signal="body_entered" from="apple_box/collecter" to="apple_box" method="_on_collecter_body_entered"]
 [connection signal="pressed" from="shop" to="." method="_on_shop_pressed"]
+[connection signal="body_entered" from="blueberry_box/collecter" to="blueberry_box" method="_on_collecter_body_entered"]
+[connection signal="body_entered" from="banana_box/collecter" to="banana_box" method="_on_collecter_body_entered"]
+[connection signal="body_entered" from="watermellon_box/collecter" to="watermellon_box" method="_on_collecter_body_entered"]
+[connection signal="body_entered" from="pineapple_box/collecter" to="pineapple_box" method="_on_collecter_body_entered"]

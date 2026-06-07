@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://kscqowtxg60s"]
+
+[ext_resource type="Script" uid="uid://dn7047w7y62qk" path="res://Scripts/watermellon.gd" id="1_hwteb"]
+[ext_resource type="Texture2D" uid="uid://cp56ce17ivao" path="res://Sprites/watermellon (2).png" id="2_wkjv1"]
+[ext_resource type="AudioStream" uid="uid://dhbhjyoj5gbxt" path="res://sfx/pick.mp3" id="3_a7nfm"]
+[ext_resource type="AudioStream" uid="uid://bdru0tut40oc0" path="res://sfx/throw.mp3" id="4_5k8pr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7nfm"]
+atlas = ExtResource("2_wkjv1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5k8pr"]
+atlas = ExtResource("2_wkjv1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5gye"]
+atlas = ExtResource("2_wkjv1")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bsys"]
+atlas = ExtResource("2_wkjv1")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w6yko"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7nfm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5k8pr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5gye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bsys")
+}],
+"loop": false,
+"name": &"grow",
+"speed": 25.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dymfw"]
+radius = 23.0
+height = 54.0
+
+[node name="watermellon" type="Node2D" unique_id=1083654232]
+
+[node name="watermellon" type="RigidBody2D" parent="." unique_id=1520399733 groups=["Watermellon"]]
+input_pickable = true
+script = ExtResource("1_hwteb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="watermellon" unique_id=382740064 groups=["Watermellon"]]
+position = Vector2(-1, 3)
+scale = Vector2(2.125, 2.125)
+sprite_frames = SubResource("SpriteFrames_w6yko")
+animation = &"grow"
+frame = 4
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="watermellon" unique_id=790217233 groups=["Watermellon"]]
+position = Vector2(0, 4)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_dymfw")
+
+[node name="Pick" type="AudioStreamPlayer2D" parent="watermellon" unique_id=1798513692]
+position = Vector2(-1, 2)
+stream = ExtResource("3_a7nfm")
+volume_db = 8.748
+pitch_scale = 1.39
+
+[node name="Throw" type="AudioStreamPlayer2D" parent="watermellon" unique_id=293776216]
+position = Vector2(-2, -1)
+stream = ExtResource("4_5k8pr")
+volume_db = -16.523
+pitch_scale = 1.78
+
+[connection signal="input_event" from="watermellon" to="watermellon" method="_on_input_event"]

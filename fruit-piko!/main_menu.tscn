@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bw2ujh4ru1e2d"]
+
+[ext_resource type="Texture2D" uid="uid://bkuga8l3xqid1" path="res://icon.png" id="1_7vrkn"]
+[ext_resource type="Script" uid="uid://b5dawa6uowdud" path="res://main_menu.gd" id="1_glbon"]
+[ext_resource type="FontFile" uid="uid://cvdmj41qc8leu" path="res://fruit_piko_font.ttf" id="2_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://bd6wf1qdd170x" path="res://Sprites/button2.png" id="4_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://b4kexbq4x88s8" path="res://Sprites/button2h.png" id="5_qe12f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jix8l"]
+font = ExtResource("2_fu7sn")
+font_size = 80
+font_color = Color(0, 0.6714116, 0.25968665, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8qtwp"]
+font = ExtResource("2_fu7sn")
+font_size = 40
+font_color = Color(0.4030239, 0.66055393, 0.36813995, 1)
+
+[node name="Main menu" type="Node2D" unique_id=856765437]
+script = ExtResource("1_glbon")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=2043740439]
+z_index = -4
+position = Vector2(326.25, 329.24997)
+scale = Vector2(20.734373, 20.734373)
+texture = ExtResource("1_7vrkn")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1278693961]
+z_index = -4
+position = Vector2(4285.0005, -2197.9995)
+scale = Vector2(227.96097, 227.96097)
+texture = ExtResource("1_7vrkn")
+
+[node name="Label" type="Label" parent="." unique_id=392740191]
+offset_left = 633.0
+offset_top = 61.0
+offset_right = 1094.0
+offset_bottom = 161.0
+text = "Fruit Piko!"
+label_settings = SubResource("LabelSettings_jix8l")
+
+[node name="playb" type="TextureButton" parent="." unique_id=722141160]
+offset_left = 638.0
+offset_top = 212.0
+offset_right = 1064.0
+offset_bottom = 510.0
+texture_normal = ExtResource("4_nlkkf")
+texture_pressed = ExtResource("4_nlkkf")
+texture_hover = ExtResource("5_qe12f")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="playb" unique_id=1207275086]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 130.0
+offset_right = 282.0
+offset_bottom = 233.0
+text = "Play!"
+label_settings = SubResource("LabelSettings_8qtwp")
+
+[connection signal="pressed" from="playb" to="." method="_on_playb_pressed"]

@@ -4,6 +4,7 @@ extends RigidBody2D
 @export var max_speed := 1000.0
 @export var throw_force := 500.0
 var spawn_marker: Marker2D
+var grabnum = 0
 
 var held := false
 
@@ -36,7 +37,11 @@ func _input(event):
 			for hit in result:
 				if hit.collider == self:
 					held = true
+					if grabnum == 0:
+						$Pick.play()
+						grabnum = 1
 					break
+					
 
 		# Drop
 		if event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
@@ -45,6 +50,7 @@ func _input(event):
 		# Throw
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed and held:
 			held = false
+			$Throw.play()
 
 			var dir = (
 				get_global_mouse_position() - global_position

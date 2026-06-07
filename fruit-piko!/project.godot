@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Fruit Piko!"
-run/main_scene="uid://dj64qh3d7eya6"
+run/main_scene="uid://bw2ujh4ru1e2d"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://bkuga8l3xqid1"
 
 [autoload]
 
 Data="*uid://chbk2n8m24k0l"
+Music="*uid://ddawj8h1lqri7"
 
 [global_group]
 
@@ -26,6 +27,7 @@ Blueberry=""
 Banana=""
 Watermellon=""
 Pineapple=""
+Border=""
 
 [physics]
 

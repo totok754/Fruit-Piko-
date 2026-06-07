@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ddawj8h1lqri7"]
+
+[ext_resource type="AudioStream" uid="uid://ddvbgkq5n5q4j" path="res://sfx/grow.mp3" id="1_3h6ak"]
+
+[node name="music" type="Node2D" unique_id=1406788339]
+
+[node name="Grow" type="AudioStreamPlayer2D" parent="." unique_id=968251012]
+position = Vector2(-1, -1)
+stream = ExtResource("1_3h6ak")
+volume_db = -11.664
+autoplay = true
